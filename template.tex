@@ -1,0 +1,333 @@
+%
+%Academic CV LaTeX Template
+% Author: Dubasi Pavan Kumar
+% LinkedIn: https://www.linkedin.com/in/im-pavankumar/
+% License: MIT
+%
+% For errors, suggestions, or improvements, please contact:
+% Email: pavankumard.pg19.ma@nitp.ac.in
+%
+
+\documentclass[a4paper,11pt]{article}
+
+% Package imports
+\usepackage{latexsym}
+\usepackage{xcolor}
+\usepackage{float}
+\usepackage{ragged2e}
+\usepackage[empty]{fullpage}
+\usepackage{wrapfig}
+\usepackage{lipsum}
+\usepackage{tabularx}
+\usepackage{titlesec}
+\usepackage{geometry}
+\usepackage{marvosym}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage{fancyhdr}
+\usepackage{multicol}
+\usepackage{graphicx}
+\usepackage{cfr-lm}
+\usepackage[T1]{fontenc}
+\usepackage{fontawesome5}
+\usepackage{ragged2e}
+
+% Color definitions
+\definecolor{darkblue}{RGB}{0,0,139}
+\definecolor{placeholdercolor}{RGB}{204, 102, 0} % Orange color for placeholders
+\newcommand{\placeholder}[1]{\textcolor{placeholdercolor}{#1}}
+
+% Page layout
+\setlength{\multicolsep}{0pt} 
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+\geometry{left=1.4cm, top=0.8cm, right=1.2cm, bottom=1cm}
+\setlength{\footskip}{5pt} % Addressing fancyhdr warning
+
+% Hyperlink setup (moved after fancyhdr to address warning)
+\usepackage[hidelinks]{hyperref}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=darkblue,
+    filecolor=darkblue,
+    urlcolor=darkblue,
+}
+
+% Custom box settings
+\usepackage[most]{tcolorbox}
+\tcbset{
+    frame code={},
+    center title,
+    left=0pt,
+    right=0pt,
+    top=0pt,
+    bottom=0pt,
+    colback=gray!20,
+    colframe=white,
+    width=\dimexpr\textwidth\relax,
+    enlarge left by=-2mm,
+    boxsep=4pt,
+    arc=0pt,outer arc=0pt,
+}
+
+% URL style
+\urlstyle{same}
+
+% Text alignment
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Section formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-7pt}]
+
+% Custom commands
+\newcommand{\resumeItem}[2]{
+  \item{
+    \textbf{#1}{\hspace{0.5mm}#2 \vspace{-0.5mm}}
+  }
+}
+
+\newcommand{\resumePOR}[3]{
+\vspace{0.5mm}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+        \textbf{#1}\hspace{0.3mm}#2 & \textit{\small{#3}} 
+    \end{tabular*}
+    \vspace{-2mm}
+}
+
+\newcommand{\resumeSubheading}[4]{
+\vspace{0.5mm}\item
+    \begin{tabular*}{0.98\textwidth}[t]{l@{\extracolsep{\fill}}r}
+        \textbf{#1} & \textit{\footnotesize{#4}} \\
+        \textit{\footnotesize{#3}} &  \footnotesize{#2}\\
+    \end{tabular*}
+    \vspace{-2.4mm}
+}
+
+\newcommand{\resumeProject}[4]{
+\vspace{0.5mm}\item
+    \begin{tabular*}{0.98\textwidth}[t]{l@{\extracolsep{\fill}}r}
+        \textbf{#1} & \textit{\footnotesize{#3}} \\
+        \footnotesize{\textit{#2}} & \footnotesize{#4}
+    \end{tabular*}
+    \vspace{-2.4mm}
+}
+
+\newcommand{\resumeSubItem}[2]{\resumeItem{#1}{#2}\vspace{-4pt}}
+
+\renewcommand{\labelitemi}{$\vcenter{\hbox{\tiny$\bullet$}}$}
+\renewcommand{\labelitemii}{$\vcenter{\hbox{\tiny$\circ$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*,labelsep=1mm]}
+\newcommand{\resumeHeadingSkillStart}{\begin{itemize}[leftmargin=*,itemsep=1.7mm, rightmargin=2ex]}
+\newcommand{\resumeItemListStart}{\begin{itemize}[leftmargin=*,labelsep=1mm,itemsep=0.5mm]}
+
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}\vspace{2mm}}
+\newcommand{\resumeHeadingSkillEnd}{\end{itemize}\vspace{-2mm}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-2mm}}
+\newcommand{\cvsection}[1]{%
+\vspace{2mm}
+\begin{tcolorbox}
+    \textbf{\large #1}
+\end{tcolorbox}
+    \vspace{-4mm}
+}
+
+\newcolumntype{L}{>{\raggedright\arraybackslash}X}%
+\newcolumntype{R}{>{\raggedleft\arraybackslash}X}%
+\newcolumntype{C}{>{\centering\arraybackslash}X}%
+
+% Commands for icon sizing and positioning
+\newcommand{\socialicon}[1]{\raisebox{-0.05em}{\resizebox{!}{1em}{#1}}}
+\newcommand{\ieeeicon}[1]{\raisebox{-0.3em}{\resizebox{!}{1.3em}{#1}}}
+
+% Font options
+\newcommand{\headerfonti}{\fontfamily{phv}\selectfont} % Helvetica-like (similar to Arial/Calibri)
+\newcommand{\headerfontii}{\fontfamily{ptm}\selectfont} % Times-like (similar to Times New Roman)
+\newcommand{\headerfontiii}{\fontfamily{ppl}\selectfont} % Palatino (elegant serif)
+\newcommand{\headerfontiv}{\fontfamily{pbk}\selectfont} % Bookman (readable serif)
+\newcommand{\headerfontv}{\fontfamily{pag}\selectfont} % Avant Garde-like (similar to Trebuchet MS)
+\newcommand{\headerfontvi}{\fontfamily{cmss}\selectfont} % Computer Modern Sans Serif
+\newcommand{\headerfontvii}{\fontfamily{qhv}\selectfont} % Quasi-Helvetica (another Arial/Calibri alternative)
+\newcommand{\headerfontviii}{\fontfamily{qpl}\selectfont} % Quasi-Palatino (another elegant serif option)
+\newcommand{\headerfontix}{\fontfamily{qtm}\selectfont} % Quasi-Times (another Times New Roman alternative)
+\newcommand{\headerfontx}{\fontfamily{bch}\selectfont} % Charter (clean serif font)
+
+\begin{document}
+\headerfontiii
+
+% Header
+\begin{center}
+    {\Huge\textbf{Reihane Arabpoor}}
+\end{center}
+\vspace{-6mm}
+
+\begin{center}
+    \small{
+    \socialicon{\faEnvelope}
+    \href{mailto:rarabp2@uic.edu}{rarabp2@uic.edu}
+    |
+    \socialicon{\faLinkedin} \href{https://www.linkedin.com/in/reihane-arabpoor}{Linkedin} 
+    }
+\end{center}
+\vspace{-6mm}
+\begin{center}
+    \small{Chicago, Illinois, USA}
+\end{center}
+\vspace{-6mm}
+
+% Professional Summary
+\begin{justify}
+\small{Ph.D. student in Industrial Engineering at UIC with research expertise in additive manufacturing and printed electronics. Experienced in aerosol jet printing, multiphysics simulations, and machine learning for manufacturing processes. Seeking internship opportunities in R\&D, advanced manufacturing, and process planning \& optimization.}    
+\end{justify}
+
+\vspace{-3mm}
+
+\section{\textbf{Education}}
+\vspace{2mm}
+\resumeSubHeadingListStart
+
+\resumeSubheading
+{University of Illinois Chicago}{Chicago, USA}
+{Direct Ph.D., Industrial Engineering}{January 2023 - December 2027 (Expected)}
+\resumeItemListStart
+\footnotesize{\item GPA: 4.00/4.00
+\item Advisor: Dr. Azadeh Haghighi }
+\resumeItemListEnd
+
+\resumeSubheading
+{Sharif University of Technology}{Tehran, Iran}
+{Bachelor of Science, Mechanical Engineering}{September 2017 - June 2022}
+\resumeItemListStart
+\footnotesize{\item GPA: 3.43/4.00}
+% \item Ranked 24th in the Iranian University Entrance Exam (Konkour)}
+\resumeItemListEnd
+
+\resumeSubHeadingListEnd
+
+\vspace{-3mm}
+\section{\textbf{Research Interests}}
+\vspace{2mm}
+\small{
+Additive Manufacturing, 3D Printed Electronics, Aerosol Jet Printing, Embedded Electronics, Hybrid Additive Manufacturing, Multiphysics Simulations, Machine Learning for Manufacturing, Process Planning \& Optimization, Physics Informed Machine Learning
+}
+% \vspace{-1mm}
+\section{\textbf{Selected Publications} \hfill \textcolor{darkblue}{\scriptsize C=Conference, J=Journal, S=In Submission}}
+\vspace{2mm}
+\small{
+\begin{enumerate}[leftmargin=*, labelsep=0.5em, align=left, widest={[\textbf{S.1}]}, itemindent=0em, label={\textbf{[\arabic*]}]}]
+
+\item[\textbf{[S.1]}]{\textbf{Experimental Insights into Aerosol Jet Printing on 3D Curved Surfaces: Line Morphology and Resistivity}}\\ \footnotesize{\textbf{Arabpoor, R.}, Haghighi, A. (2025).  Manuscript submitted for publication in \textit{Manufacturing Letters}}
+
+\item[\textbf{[S.2]}] {\textbf{Kinematics-Guided Multi-Task Learning for Transferable Models in Robotic Manufacturing}}\\ \footnotesize{Ghungrad, S., \textbf{Arabpoor, R.}, Rescsanski, S., Imani, F., Haghighi, A. (2025).  Manuscript submitted for publication in \textit{RCIM}}
+
+\item[\textbf{[S.3]}]{\textbf{Physics-Informed Neural Networks for Thermal Modeling Transferable Across Paths, Print Parameters, and Beam Profiles}}\\ \footnotesize{Faegh, M., Sanvelly, R., \textbf{Arabpoor, R.}, Rao, P., Mukherjee, T., Haghighi, A. (2025).  Manuscript submitted for publication in \textit{Journal of Additive Manufacturing}}
+
+\item[\textbf{[C.1]}]{\textbf{Leveraging Physics-Informed Neural Networks for Temperature Field Transfer From Single-Track to Multi-Track Multi-Head Additive Manufacturing}}\\ \footnotesize{Faegh, M., \textbf{Arabpoor, R.}, Haghighi, A. (2025). In \textit{MSEC 2025}}
+
+\item[\textbf{[S.4]}] {\textbf{Synchronous Multi-Layer Cooperative 3D Printing for Enhanced Structural Integrity}}\\ \footnotesize{Ghungrad, S., \textbf{Arabpoor, R.}, Haghighi, A. (2024). SSRN 4897913}
+
+\item[\textbf{[S.5]}] {\textbf{Binder Jetting Additive Manufacturing: A State-of-the-Art Review}}\\ \footnotesize{Mostafaei, A., Shi, H., Dong, R., Ibrahim, B., Zinatlou Ajabshir, S., Gilmer, D., \textbf{Arabpoor, R.}, et al. (2024).  Manuscript submitted for publication in \textit{Progress in Materials Science}}
+
+\end{enumerate}
+}  
+% \vspace{-1mm}
+
+\section{\textbf{Work and Research Experiences}}
+\vspace{2mm}
+\resumeSubHeadingListStart
+
+\resumeSubheading
+    {Research Assistant}{Chicago, Illinois}
+    {{Smarture Lab, University of Illinois Chicago [\href{https://smarture.lab.uic.edu/}{\faIcon{globe}}]}}{January 2023 -- Present}
+    \resumeItemListStart
+        \item Conducting research under the supervision of Dr. Azadeh Haghighi in additive manufacturing, printed electronics, and intelligent process optimization.
+        
+        \item \textbf{Investigation of Interfacial Fluid Mechanics and Complex Surface Printing in Aerosol Jet Printing (AJP):}
+        Advanced the understanding of AJP for electronics manufacturing on complex and non-planar surfaces. Combined experimental studies, COMSOL Multiphysics simulations, and machine learning–based models to enhance print quality, predictability, and process design. Characterized printed samples using high-resolution microscopy and electrical measurements to establish a framework for predictive design and process optimization, enabling conformal printing of electronics with high precision and repeatability.
+        
+        \item \textbf{Thermal Analysis of Complex Trajectories in Metal Additive Manufacturing:}
+        Developed Physics-Informed Neural Network (PINN) models for predicting thermal histories across complex toolpaths in metal AM. The models demonstrated transferability across multi-track and multi-head laser systems, providing high-fidelity thermal predictions that support preprocessing and process optimization.
+        
+        \item \textbf{Synchronous Multi-Layer 3D Printing for Enhanced Structural Integrity:}
+        Pioneered a novel synchronous multi-robot, multi-layer printing framework designed to improve structural strength and reduce fabrication time. The method was validated through analytical modeling, finite element simulations, and experimental testing, showing significant potential for scalable multi-material 3D printing.
+        
+        \item Performed multiphysics simulations in ANSYS Fluent to validate and benchmark thermal and fluid models under various additive manufacturing process conditions.
+    \resumeItemListEnd
+
+\resumeSubheading
+    {Research Assistant}{Tehran, Iran}
+    {{Microfluidic Lab, Sharif University of Technology}}{January 2021 -- June 2022}
+    \resumeItemListStart
+        \item Conducted research under the supervision of Dr. Bahar Firoozabady in the areas of water desalination, reverse osmosis phenomena, and nanoscale fluid mechanics using molecular dynamics.
+        \item \textbf{Investigation of Graphene Slit Membrane Efficiency for Water Desalination via LAMMPS Simulations:}
+        Performed molecular dynamics simulations using LAMMPS to evaluate the transport behavior and separation efficiency of slit graphene membranes under reverse osmosis conditions, providing insight into nanoscale mechanisms of ion rejection and water permeability.
+    \resumeItemListEnd
+
+\resumeSubHeadingListEnd
+
+
+
+
+\vspace{-3mm}
+\section{\textbf{Skills}}
+\vspace{2mm}
+ \resumeHeadingSkillStart
+  \resumeSubItem{Languages:}
+    {English (Fluent), Farsi (Native)}
+  \resumeSubItem{Programming:}
+  {Python, MATLAB}
+  \resumeSubItem{Simulation \& CAD:}
+  {COMSOL Multiphysics, Ansys Fluent, SolidWorks, AutoCAD}
+  \resumeSubItem{Characterization \& Fabrication:}
+    {Optical profilometry, Electron (TEM and SEM) and light microscopy trained user, IV measurements (4-point probe), PVD coating, lithography, cleanroom operations}
+ \resumeHeadingSkillEnd
+
+\section{\textbf{Professional Activities}}
+\vspace{1mm}
+\resumeSubHeadingListStart
+\resumeProject
+  {Teaching Assistant}
+  {University of Illinois Chicago, Sharif University of Technology}
+  {}
+  {}
+\vspace{2mm}
+\resumeItemListStart
+  \item \textbf{UIC}: Introduction to Thermodynamics (Spring 2025, Fall 2025), Safety Engineering (Fall 2024), Engineering Dynamics (Spring 2024), Chemical Engineering Lab I (Fall 2023), Selected Topics in Chemical Engineering (Spring 2023)
+  \item \textbf{SUT}: Heat Transfer II (Spring 2021, Fall 2021)
+\resumeItemListEnd
+\resumeProject
+  {Conference/Journal Reviewer}
+  {}
+  {}
+  {}
+\vspace{-1mm}
+\resumeItemListStart
+  \item \textbf{MSEC 2025} (Manufacturing Science and Engineering Conference)
+  \item \textbf{NAMRC 2025} (North American Manufacturing Research Conference)
+  \item \textbf{IJMR 2024} (International Journal of Manufacturing Research)
+\resumeItemListEnd
+
+\resumeSubHeadingListEnd
+\vspace{-3mm}
+
+\section{\textbf{Notable Courses}}
+\vspace{2mm}
+\small{Neural Networks \small{\normalfont{(A/Grad)}}, \space
+Advanced Thermodynamics \small{\normalfont{(A/Grad)}}, \space
+AI in Advanced Manufacturing \small{\normalfont{(A/Grad)}}, \space
+Micro-machining Senors \small{\normalfont{(A/Grad)}}, \space
+Operation Research II \small{\normalfont{(A/Grad)}}, \space
+Heat Transfer I and II \small{\normalfont{(4/4)}}, \space
+Fluid Mechanics II \small{\normalfont{(4/4)}}, \space
+Interfacial Fluid Mechanics \small{\normalfont{(4/4)}} \space
+}
+
+\end{document}
+
+
