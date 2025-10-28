@@ -1,31 +1,27 @@
-"VLDB":
-  url: https://www.vldb.org/
+"Manufacturing Letters":
+  url: https://www.elsevier.com/journals/manufacturing-letters/2213-8463
   color: "#1f77b4"
 
-"ICML":
-  url: https://icml.cc/
+"Robotics and Computer-Integrated Manufacturing":
+  url: https://www.sciencedirect.com/journal/robotics-and-computer-integrated-manufacturing
   color: "#ff7f0e"
 
-"ICLR":
-  url: https://iclr.cc/
+"Journal of Additive Manufacturing":
+  url: https://www.elsevier.com/journals/journal-of-materials-processing-technology/0924-0136
   color: "#2ca02c"
 
-"SIGMOD":
-  url: https://www.sigmod.org/
+"MSEC":
+  url: https://www.asme.org/conferences-events/mece/
   color: "#d62728"
 
-"TKDE":
-  url: https://www.computer.org/csdl/journal/tk
+"Progress in Materials Science":
+  url: https://www.sciencedirect.com/journal/progress-in-materials-science
   color: "#9467bd"
 
-"HiPC":
-  url: https://hipc.org/
+"SSRN":
+  url: https://www.ssrn.com/
   color: "#8c564b"
 
-"IEEE Data Eng. Bull.":
-  url: http://sites.computer.org/debull/
+"Proceedings of the VLDB Endowment":
+  url: https://www.vldb.org/
   color: "#e377c2"
-
-"arXiv":
-  url: https://arxiv.org/
-  color: "#7f7f7f"

@@ -2,124 +2,92 @@
   type: map
   contents:
     - name: Full Name
-      value: Mahdi Erfanian
+      value: Reihane Arabpoor
     - name: Location
       value: Chicago, Illinois, USA
     - name: Languages
-      value: English, Persian (Farsi)
+      value: English (Fluent), Farsi (Native)
 
 - title: Education
   type: time_table
   contents:
-    - title: Direct Ph.D., Computer Science
+    - title: Direct Ph.D., Industrial Engineering
       institution: University of Illinois Chicago, Chicago, USA
-      year: December 2022 - Present
+      year: January 2023 - December 2027 (Expected)
       description:
-        - Thesis: Generative AI for Multimodal Data Management
-        - M.S. in Computer Science (awarded en route to Ph.D.), Fall 2025
+        - Advisor: Dr. Azadeh Haghighi
         - GPA: 4.00/4.00
-    - title: Bachelor of Science, Computer Engineering
+    - title: Bachelor of Science, Mechanical Engineering
       institution: Sharif University of Technology, Tehran, Iran
       year: September 2017 - June 2022
       description:
-        - GPA: 3.70/4.00
-        - Ranked 60th nationwide among ~150,000 participants in the Iranian University Entrance Exam (Konkour)
+        - GPA: 3.43/4.00
 
 - title: Research Experience
   type: time_table
   contents:
     - title: Research Assistant
-      institution: IndexLab, University of Illinois Chicago
-      year: June 2023 - Present
+      institution: Smarture Lab, University of Illinois Chicago
+      year: January 2023 - Present
       description:
-        - Researching under supervision of Dr. Abolfazl Asudeh on databases and responsible data management
-        - Developed Needle, an efficient powerful text-to-image retrieval framework that outperformed OpenAI's CLIP by 200% in mean average precision on complex natural language queries
-        - Implemented RSR, an efficient binary/ternary matrix multiplication method, accelerating model inference time by 24x compared to the standard NumPy baseline and 2.5x on Quantized LLMs
-        - Developed Chameleon, a fairness-aware data augmentation method that improved model accuracy on under-represented groups by 22% on the FERETDB benchmark on average
-        - Developed FairEM360, a framework for auditing and mitigating bias in entity matching
+        - Conducting research under the supervision of Dr. Azadeh Haghighi in additive manufacturing, printed electronics, and intelligent process optimization
+        - Investigation of Interfacial Fluid Mechanics and Complex Surface Printing in Aerosol Jet Printing (AJP): Advanced the understanding of AJP for electronics manufacturing on complex and non-planar surfaces. Combined experimental studies, COMSOL Multiphysics simulations, and machine learning–based models to enhance print quality and process design
+        - Thermal Analysis of Complex Trajectories in Metal Additive Manufacturing: Developed Physics-Informed Neural Network (PINN) models for predicting thermal histories across complex toolpaths in metal AM, demonstrating transferability across multi-track and multi-head laser systems
+        - Synchronous Multi-Layer 3D Printing for Enhanced Structural Integrity: Pioneered a novel synchronous multi-robot, multi-layer printing framework designed to improve structural strength and reduce fabrication time
+        - Performed multiphysics simulations in ANSYS Fluent to validate and benchmark thermal and fluid models under various additive manufacturing process conditions
     - title: Research Assistant
-      institution: Dreese Lab, The Ohio State University
-      year: December 2022 - August 2023
+      institution: Microfluidic Lab, Sharif University of Technology
+      year: January 2021 - June 2022
       description:
-        - Researched graph and pattern mining under the supervision of Dr. Srinivasan Parthasarathy
-        - Developed SYSML+, an enhanced stylometry framework that improved author identification accuracy by 3% over the baseline SYSML system
+        - Conducted research under the supervision of Dr. Bahar Firoozabady in water desalination, reverse osmosis phenomena, and nanoscale fluid mechanics using molecular dynamics
+        - Investigation of Graphene Slit Membrane Efficiency for Water Desalination via LAMMPS Simulations: Performed molecular dynamics simulations using LAMMPS to evaluate the transport behavior and separation efficiency of slit graphene membranes under reverse osmosis conditions
 
-- title: Industry Experience
-  type: time_table
-  contents:
-    - title: Software Engineer
-      institution: Software Engineering Lab, Sharif University of Technology
-      year: March 2022 - August 2022
-      description:
-        - B.Sc. Project: Architected and built a CI/CD pipeline for a containerized, microservice-based web application
-        - Optimized a stock market application's deployment from a monolithic to a distributed architecture, improving scalability and deployment speed
-        - Decreased production Docker image size by over 95% compared to traditional build methods, enabling faster deployments
-    - title: Data Engineer
-      institution: Divar Corp.
-      year: September 2019 - March 2022
-      description:
-        - Divar is Iran's largest classifieds platform with over 40 million active users and 200 TB of data
-        - Engineered and maintained the core data pipeline (Airflow, Spark, S3) processing over 200TB of data, improving data availability for a team of 40+ data analysts
-        - Deployed a distributed JupyterHub on Kubernetes, enabling on-demand, scalable analysis environments for the data science team and cutting down experiment setup time
-        - Automated ETL deployment workflows using GitLab CI/CD, reducing manual deployment time from hours to minutes and eliminating release errors
-    - title: Software Engineering Intern
-      institution: Rahnema College
-      year: August 2019 - November 2019
-      description:
-        - Designed and developed an E-commerce auction application using a microservice architecture (Spring Boot, ReactJS, Docker)
-        - Implemented a push notification service from scratch using Spring Boot and WebSocket
 
 - title: Professional Activities
   type: time_table
   contents:
     - title: Teaching Assistant
-      institution: University of Illinois Chicago, The Ohio State University, Sharif University of Technology
-      year: 2018 - Present
+      institution: University of Illinois Chicago, Sharif University of Technology
+      year: 2021 - Present
       description:
-        - UIC: Databases (Spring 24, Fall 23)
-        - OSU: Introduction to Java (Summer 23, Spring 23)
-        - SUT: Computer Networks (Spring 21), Computer Architecture (Spring 21, Fall 20), Computer Structure and Languages (Fall 20), Systems Analysis and Design (Fall 20), Design of Algorithms (Spring 20), Fundamentals of Programming (Fall 18)
+        - UIC: Introduction to Thermodynamics (Spring 2025, Fall 2025), Safety Engineering (Fall 2024), Engineering Dynamics (Spring 2024), Chemical Engineering Lab I (Fall 2023), Selected Topics in Chemical Engineering (Spring 2023)
+        - SUT: Heat Transfer II (Spring 2021, Fall 2021)
     - title: Conference/Journal Reviewer
       institution: Various
       year: 2024 - Present
       description:
-        - ICLR 2025 (Reviewer)
-        - NeurIPS 2025 DynaFront Workshop (Reviewer)
-        - CIKM 2025 (PC Member and Reviewer)
-        - TKDE 2025 (Reviewer) (IEEE Transactions on Knowledge and Data Engineering)
-        - CIKM 2024 (Reviewer) (International Conference on Information and Knowledge Management)
-        - TKDE 2024 (Reviewer) (IEEE Transactions on Knowledge and Data Engineering)
-        - PETRA 2024 (ETHER-AI workshop) (Reviewer)
+        - MSEC 2025 (Manufacturing Science and Engineering Conference)
+        - NAMRC 2025 (North American Manufacturing Research Conference)
+        - IJMR 2024 (International Journal of Manufacturing Research)
 
 - title: Research Interests
   type: nested_list
   contents:
-    - title: Multimodal Data Management
+    - title: Additive Manufacturing
       items:
-        - Text-to-image retrieval systems
-        - Foundation models for data augmentation
-        - Vector databases and information retrieval
-    - title: Generative AI and LLMs
+        - 3D Printed Electronics
+        - Aerosol Jet Printing
+        - Embedded Electronics
+        - Hybrid Additive Manufacturing
+    - title: Multiphysics Simulations
       items:
-        - Large language model applications
-        - Synthetic data generation
-        - Algorithmic fairness in AI systems
-    - title: Algorithmics and Distributed Systems
+        - COMSOL Multiphysics simulations
+        - ANSYS Fluent modeling
+        - Thermal analysis of manufacturing processes
+    - title: Machine Learning for Manufacturing
       items:
-        - Efficient matrix multiplication algorithms
-        - Binary and ternary neural networks
-        - Scalable data processing systems
+        - Machine learning for manufacturing processes
+        - Process Planning & Optimization
+        - Physics-Informed Machine Learning
 
 - title: Notable Courses
   type: list
   contents:
-    - Cloud Computing (A/Grad)
-    - Advanced Algorithms (A/Grad)
-    - Introduction to Network Science (A/Grad)
-    - Algorithms I (A/Grad)
-    - Software Engineering (4/4)
-    - Modern Information Retrieval (4/4)
-    - Functional Programming (4/4)
-    - Design of Algorithms (4/4)
-    - Data Structures and Algorithms (4/4)
-    - Databases Design (4/4)
+    - Neural Networks (A/Grad)
+    - Advanced Thermodynamics (A/Grad)
+    - AI in Advanced Manufacturing (A/Grad)
+    - Micro-machining Sensors (A/Grad)
+    - Operation Research II (A/Grad)
+    - Heat Transfer I and II (4/4)
+    - Fluid Mechanics II (4/4)
+    - Interfacial Fluid Mechanics (4/4)

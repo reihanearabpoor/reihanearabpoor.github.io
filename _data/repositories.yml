@@ -1,9 +1,6 @@
 github_users:
-  - merfanian
+  - reihanearabpoor
 
 repo_description_lines_max: 2
 
 github_repos:
-  - UIC-InDeXLab/Needle
-  - UIC-InDeXLab/RSR
-  - UIC-InDeXLab/Chameleon
