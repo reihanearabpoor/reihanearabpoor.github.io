@@ -4,15 +4,6 @@ title: about
 permalink: /
 subtitle: Ph.D. Student at UIC
 
-profile:
-  align: right
-  image: prof_pic.jpg
-  image_circular: false # crops the image to make it circular
-  more_info: >
-    <p>Smarture Lab</p>
-    <p>University of Illinois Chicago</p>
-    <p>Chicago, IL 60607</p>
-
 news: true # includes a list of news items
 selected_papers: true # includes a list of papers marked as "selected={true}"
 social: true # includes social icons at the bottom of the page
